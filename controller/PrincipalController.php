@@ -23,12 +23,19 @@ class PrincipalController {
             $this->controller->invoke();
             
          }//if formulario
-        /* elseif (($_GET['formulario2'])){
-             
-         }*/
+         
+         elseif (isset($_GET['formulario2'])){
+             require_once 'controller/Formulario2Controller.php';
+            $this->controller = new Formulario2Controller();
+            $this->controller->invoke();
+         }
+         
+         elseif (isset($_GET['inicio'])){
+             include 'view/InicioView.php';
+         }
          
          else{
-             include 'view/Formulario1View.php';
+             include 'view/IndexView.php';
          }
      }
 }

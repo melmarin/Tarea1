@@ -1,21 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html><head>
-  
-  <meta content="text/html; charset=UTF-8" http-equiv="content-type">
-  <title>Estilos</title>
+<?php
+    //header
+    include_once 'header.php';
 
-  
-  <meta name="generator" content="Bluefish 2.2.2" >
-
-  
-  <style type="text/css">
-	<!--
-		@page { margin: 2cm }
-		P { margin-bottom: 0cm; text-align: justify }
-		P.western { so-language: es-ES }
-	-->
-	</style>
-</head>
+?> 
 <body>
 <p class="western" align="justify" lang="es-ES"><font color="#FF0000"><font size="3"><b>CUAL ES SU ESTILO DE APRENDIZAJE?</b></font></font></p>
 <p class="western" align="justify" lang="es-ES"><font color="#000000"><font size="3"><b>Instrucciones:</b></font></font></p>
@@ -391,5 +379,8 @@ ESTILO&nbsp;&nbsp; <input maxlength="12" size="12" name="ESTILOFINAL">
         </select><br>
   <font color="#ff0000"><font size="4"> -------------------------------------------------</font></font><input value="ENVIAR" type="submit">
 </form>
+<?php
+    //footer
+    include_once 'footer.php';
 
-</body></html>
+?>   

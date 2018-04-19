@@ -52,7 +52,7 @@ class Formulario1Model {
         $this->datos = $this->con->consultaRetorno($this->sql);
         while ($row = $this->datos->fetch(\PDO::FETCH_ASSOC)) {
             $array[] = $row;
-        }//
+        }
 
         $numTemp = 0;
         $numActual = 0;
@@ -67,7 +67,6 @@ class Formulario1Model {
 
             if ($numTemp == 0) {
                 $numTemp = $numActual;
-                $filaFinal ="ya";
             } else if ($numActual < $numTemp) {
                 $numTemp = $numActual;
                 $filaFinal = $fila['Estilo'];
