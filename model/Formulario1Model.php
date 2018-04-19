@@ -7,7 +7,6 @@ require_once 'core/Conexion.php';
 class Formulario1Model {
 
     private $sql;
-    private $cadena;
     private $datos;
     private $con;
     private $ec;
@@ -47,31 +46,35 @@ class Formulario1Model {
         $this->ea = $arrayEA['c4'] + $arrayEA['c12'] + $arrayEA['c24'] +
                 $arrayEA['c28'] + $arrayEA['c32'] + $arrayEA['c36'];
 
-        $this->sql = "SELECT CA, EC, EA, ORR, Estilo FROM `datostarea1`";
+        $this->sql = "SELECT CA, EC, EA, ORR, Estilo FROM datostarea1";
+
+
         $this->datos = $this->con->consultaRetorno($this->sql);
-        $numTemp=0;
-        $numActual=0;
-        $filaFinal = "hola";
-        foreach ($this->datos as $fila) {
+        while ($row = $this->datos->fetch(\PDO::FETCH_ASSOC)) {
+            $array[] = $row;
+        }//
+
+        $numTemp = 0;
+        $numActual = 0;
+        $filaFinal = "";
+
+        foreach ($array as $fila) {
             
-            $numActual = sqrt(pow($fila['CA']-$this->ca,2)+
-                 pow($fila['EA']-$this->ea,2)+
-                 pow($fila['ORR']-$this->or,2)+
-                 pow($fila['EC']-$this->ec,2));
-            
-            if($numTemp = 0){
+            $numActual = sqrt(pow($fila['CA'] - $this->ca, 2) +
+                    pow($fila['EA'] - $this->ea, 2) +
+                    pow($fila['ORR'] - $this->or, 2) +
+                    pow($fila['EC'] - $this->ec, 2));
+
+            if ($numTemp == 0) {
                 $numTemp = $numActual;
-            }
-                
-            else if($numActual < $numTemp){
+                $filaFinal ="ya";
+            } else if ($numActual < $numTemp) {
                 $numTemp = $numActual;
-                 $filaFinal = $fila['Estilo'];
-                 echo 'AQUIIIIIIIIIIIIIIIII';
+                $filaFinal = $fila['Estilo'];
             }
         }
-        
-         return "El estilo es: " . $filaFinal;
-        
+        return "El estilo es: " . $filaFinal;
     }
 
 }
+?>
