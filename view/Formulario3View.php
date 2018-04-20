@@ -44,8 +44,6 @@ Yo aprendo...</big></big>
 
 <input type="hidden" maxlength="3" size="3" name="CAEC">&nbsp;&nbsp;&nbsp;&nbsp;
 <input type="hidden" maxlength="3" size="3" name="EAOR">&nbsp;<br><br>
-
-ESTILO&nbsp;&nbsp; <input maxlength="12" size="12" name="ESTILOFINAL">
   <br>
   Escriba su último promedio de matrícula:<input type="Text" name="promedio"><br>
   Recinto:<select name="recinto" value="recinto">

@@ -36,6 +36,12 @@ class PrincipalController {
             $this->controller->invoke();
          }
          
+          elseif (isset($_GET['formulario4'])){
+             require_once 'controller/Formulario4Controller.php';
+            $this->controller = new Formulario4Controller();
+            $this->controller->invoke();
+         }
+         
          elseif (isset($_GET['inicio'])){
              include 'view/InicioView.php';
          }

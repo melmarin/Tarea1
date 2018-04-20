@@ -18,10 +18,6 @@ class Formulario3Model {
     private $sql;
     private $datos;
     private $con;
-    private $ec;
-    private $or;
-    private $ca;
-    private $ea;
 
     public function __construct() {
         $this->con = new \core\Conexion();
@@ -55,7 +51,6 @@ class Formulario3Model {
         $numTemp = 0;
         $numActual = 0;
         $filaFinal = "";
-        $PromedioFinal = 0;
         
         foreach ($array as $fila) {
             
@@ -75,7 +70,6 @@ class Formulario3Model {
             } else if ($numActual < $numTemp) {
                 $numTemp = $numActual;
                 $filaFinal = $fila['Sexo'];
-                $PromedioFinal = $fila['Promedio'];
             }
             
             $pesoRecinto=2;
@@ -89,7 +83,7 @@ class Formulario3Model {
         else if ($filaFinal == 'M'){
              $filaFinal = "Masculino";
         }
-         return "El Recinto es: " . $filaFinal;
+         return "El Sexo es: " . $filaFinal;
          
      }
 }
