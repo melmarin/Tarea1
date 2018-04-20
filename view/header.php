@@ -42,21 +42,21 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Sexo
                                 <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="formulario3">Formulario 3</a></li>
+                                <li><a href="?formulario3">Formulario 3</a></li>
                             </ul>
                         </li>
                          <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Profesor
                                 <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="formulario5">Formulario 5</a></li>
+                                <li><a href="?formulario5">Formulario 5</a></li>
                             </ul>
                         </li>
                          <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Redes
                                 <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="formulario6">Formulario 6</a></li>
+                                <li><a href="?formulario6">Formulario 6</a></li>
                             </ul>
                         </li>
                     </ul>
