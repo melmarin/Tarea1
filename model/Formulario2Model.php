@@ -74,9 +74,11 @@ class Formulario2Model {
                 $PromedioFinal = $fila['Promedio'];
             }
             
+            $pesoSexo=2;
+            $pesoEstilo=2;
            
         }
-         return "El Recinto es: " . $filaFinal . " ". $PromedioFinal;
+         return "El Recinto es: " . $filaFinal;
          
      }
 
